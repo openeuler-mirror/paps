@@ -1,0 +1,12 @@
+diff -uprN paps-0.6.8_raw/src/Makefile.am paps-0.6.8/src/Makefile.am
+--- paps-0.6.8_raw/src/Makefile.am	2020-01-15 10:19:03.195207683 +0000
++++ paps-0.6.8/src/Makefile.am	2020-01-15 10:23:03.639449322 +0000
+@@ -15,7 +15,7 @@ EXTRA_DIST = test_libpaps.c paps.1
+ 
+ # set the include path found by configure
+ INCLUDES= $(all_includes) `pkg-config --cflags pangoft2`
+-LIBS = `pkg-config --libs pangoft2`
++LIBS = `pkg-config --libs pangoft2 gobject-2.0 glib-2.0`
+ 
+ # Test program
+ noinst_PROGRAMS = test_libpaps

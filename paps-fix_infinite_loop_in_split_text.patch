@@ -1,0 +1,15 @@
+diff -uprN paps-0.6.8_raw/src/paps.c paps-0.6.8/src/paps.c
+--- paps-0.6.8_raw/src/paps.c	2020-01-15 10:15:32.951498063 +0000
++++ paps-0.6.8/src/paps.c	2020-01-15 10:16:26.292439298 +0000
+@@ -836,7 +836,10 @@ split_text_into_paragraphs (PangoContext
+ 				      goto fail;
+ 			      }
+ 			      for (i = 0; i < len; i++) {
+-				      wwidth += wcwidth(wtext[i]);
++				      gssize w = wcwidth(wtext[i]);
++
++				      if (w >= 0)
++					      wwidth += w;
+ 				      if (wwidth > col)
+ 					      break;
+ 				      wnewtext[i] = wtext[i];
