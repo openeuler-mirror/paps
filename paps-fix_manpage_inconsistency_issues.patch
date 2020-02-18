@@ -1,0 +1,13 @@
+diff -uprN paps-0.6.8_raw/src/paps.1 paps-0.6.8/src/paps.1
+--- paps-0.6.8_raw/src/paps.1	2007-01-19 11:05:27.000000000 +0000
++++ paps-0.6.8/src/paps.1	2020-01-15 10:09:44.105355663 +0000
+@@ -64,6 +64,9 @@ Draw page header for each page.
+ .B \-\-markup
+ Interpret the text as pango markup.
+ .TP
++.B \-\-encoding=ENCODING
++Assume the documentation encoding is ENCODING.
++.TP
+ .B \-\-lpi
+ Set the lines per inch. This determines the line spacing.
+ .TP

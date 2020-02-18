@@ -1,0 +1,15 @@
+diff -uprN paps-0.6.8_raw/src/libpaps.c paps-0.6.8/src/libpaps.c
+--- paps-0.6.8_raw/src/libpaps.c	2020-01-15 10:17:00.573044177 +0000
++++ paps-0.6.8/src/libpaps.c	2020-01-15 10:20:44.416993428 +0000
+@@ -25,8 +25,9 @@
+ 
+ #include <pango/pango.h>
+ #include <pango/pangoft2.h>
+-#include <freetype/ftglyph.h>
+-#include <freetype/ftoutln.h>
++#include <ft2build.h>
++#include FT_GLYPH_H
++#include FT_OUTLINE_H
+ #include <errno.h>
+ #include <locale.h>
+ #include <stdlib.h>
